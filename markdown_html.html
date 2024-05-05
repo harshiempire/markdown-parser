@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Editor</title>
+    <link rel="stylesheet" href="./markdown_css.css">
+</head>
+<body>
+    <div class="top-bar">
+        <button onclick="applyMarkdown('**', '**')">Bold</button>
+        <button onclick="applyMarkdown('__', '__')">Italic</button>
+        <button onclick="applyMarkdown('[Link Text](URL)', '')">Link</button>
+        <button onclick="applyMarkdown('- ', '')">List</button>
+        <button onclick="applyMarkdown('# ', '')">Heading</button>
+    </div>
+    <div class="container">
+        <textarea id="markdownInput" placeholder="Enter Markdown text..." oninput="parseMarkdown()"></textarea>
+        <div id="htmlOutput"></div>
+    </div>
+    <script src="./markdown-trying-chatgpt.js"></script>
+</body>
+</html>
